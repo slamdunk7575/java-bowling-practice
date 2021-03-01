@@ -27,7 +27,7 @@ class StrikeTest {
     }
 
     @Test
-    @DisplayName("STRIKE 상태는 점수 10점, 추가 투구 2회를 가짐")
+    @DisplayName("STRIKE 상태는 점수 10점, 추가 투구 가능 2회를 가짐")
     void strike_getScore_test() {
         // given
         State strike = Strike.of();

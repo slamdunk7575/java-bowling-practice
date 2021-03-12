@@ -49,6 +49,10 @@ public class Pin {
         return Score.of(countOfFelledPin, remaining);
     }
 
+    public Score toComplementedScore() {
+        return Score.of(MAX - countOfFelledPin);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

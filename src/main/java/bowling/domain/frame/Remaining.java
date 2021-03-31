@@ -11,7 +11,7 @@ public class Remaining {
     private static final int DECREMENT_VALUE = 1;
     private int number;
 
-    public Remaining(int remaining) {
+    private Remaining(int remaining) {
         this.number = remaining;
     }
 

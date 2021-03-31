@@ -12,10 +12,10 @@ public class Pin {
     private static final Pin[] CACHE = IntStream.rangeClosed(MIN, MAX)
                                                 .mapToObj(Pin::new)
                                                 .toArray(Pin[]::new);
-    private final int countOfFelledPin;
+    private final int felledPinCount;
 
     private Pin(int felledPin) {
-        this.countOfFelledPin = felledPin;
+        this.felledPinCount = felledPin;
     }
 
     public static Pin of(int countOfPin) {
@@ -27,30 +27,30 @@ public class Pin {
     }
 
     public Pin add(Pin felledPin) {
-        if (felledPin.countOfFelledPin == MIN) {
+        if (felledPin.felledPinCount == MIN) {
             return this;
         }
-        return of(this.countOfFelledPin + felledPin.countOfFelledPin);
+        return of(this.felledPinCount + felledPin.felledPinCount);
     }
 
     public boolean isAllFelled() {
-        return countOfFelledPin == MAX;
+        return felledPinCount == MAX;
     }
 
     public boolean isNotFelled() {
-        return countOfFelledPin == MIN;
+        return felledPinCount == MIN;
     }
 
     public Score toScore() {
-        return Score.of(countOfFelledPin);
+        return Score.of(felledPinCount);
     }
 
     public Score toScore(Remaining remaining) {
-        return Score.of(countOfFelledPin, remaining);
+        return Score.of(felledPinCount, remaining);
     }
 
     public Score toComplementedScore() {
-        return Score.of(MAX - countOfFelledPin);
+        return Score.of(MAX - felledPinCount);
     }
 
     @Override
@@ -58,11 +58,11 @@ public class Pin {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Pin pin = (Pin) o;
-        return countOfFelledPin == pin.countOfFelledPin;
+        return felledPinCount == pin.felledPinCount;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(countOfFelledPin);
+        return Objects.hash(felledPinCount);
     }
 }

@@ -19,11 +19,16 @@ public class Continue implements State {
     @Override
     public State bowl(Pin felledPin) {
         Pin sum = first.add(felledPin);
+
         if(sum.isAllFelled()) {
             return Spare.of(first);
         }
 
-        return null;
+        if(sum.isNotFelled()) {
+            return Gutter.of();
+        }
+
+        return Miss.of(first, felledPin);
     }
 
     @Override

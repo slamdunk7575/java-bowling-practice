@@ -5,6 +5,7 @@ import java.util.Objects;
 public class Score {
     private static final int MIN_SCORE = 0;
     private static final int MAX_SCORE = 10;
+
     private int number;
     private Remaining remaining;
 

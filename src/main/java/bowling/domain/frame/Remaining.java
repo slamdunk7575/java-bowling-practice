@@ -9,6 +9,7 @@ public class Remaining {
     public static final Remaining CONTINUE = Remaining.of(1);
     public static final Remaining ZERO = Remaining.of(0);
     private static final int DECREMENT_VALUE = 1;
+
     private int number;
 
     private Remaining(int remaining) {

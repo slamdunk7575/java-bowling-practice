@@ -22,7 +22,7 @@ public class Strike extends FinishedState {
     }
 
     @Override
-    public boolean isFrameFinish(State state) {
+    public boolean isFrameFinish() {
         return false;
     }
 }

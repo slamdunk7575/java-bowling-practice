@@ -47,7 +47,7 @@ public class Continue implements State {
     }
 
     @Override
-    public boolean isFrameFinish(State state) {
+    public boolean isFrameFinish() {
         return false;
     }
 }

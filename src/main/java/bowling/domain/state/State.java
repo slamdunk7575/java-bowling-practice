@@ -13,5 +13,5 @@ public interface State {
 
     Score getScore();
 
-    boolean isFrameFinish(State state);
+    boolean isFrameFinish();
 }

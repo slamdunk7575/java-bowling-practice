@@ -46,7 +46,7 @@ class SpareTest {
     }
 
     @Test
-    @DisplayName("SPARE 상태는 추가 투구없이 종료(True) 값을 가지는 테스트")
+    @DisplayName("SPARE 상태이면 추가 투구없이 종료(True)")
     void spare_is_end_test() {
         assertThat(Spare.of(Pin.of(7)).isEnd()).isTrue();
     }

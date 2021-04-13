@@ -13,7 +13,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 class BowlingGameTest {
 
     @Test
-    @DisplayName("STRIKE 경우 다음 사람에게 차례가 넘어감")
+    @DisplayName("STRIKE 이면 다음 사람에게 차례가 넘어감")
     void strike_change_user_test() {
         // given
         BowlingGame bowlingGame = BowlingGame.of(Arrays.asList("YKJ", "KKK"));
@@ -26,7 +26,7 @@ class BowlingGameTest {
     }
 
     @Test
-    @DisplayName("SPARE 경우 다음 사람에게 차례가 넘어가는 테스트")
+    @DisplayName("SPARE 이면 다음 사람에게 차례가 넘어감")
     void spare_change_user_test() {
         // given
         BowlingGame bowlingGame = BowlingGame.of(Arrays.asList("YKJ", "KKK"));
@@ -40,7 +40,7 @@ class BowlingGameTest {
     }
 
     @Test
-    @DisplayName("CONTINUE 경우 계속 차례가 유지되는 테스트")
+    @DisplayName("CONTINUE 이면 계속 차례가 유지")
     void continue_not_change_user_test() {
         // given
         BowlingGame bowlingGame = BowlingGame.of(Arrays.asList("YKJ", "KKK"));
@@ -63,7 +63,7 @@ class BowlingGameTest {
     }
 
     @Test
-    @DisplayName("모든 투구가 끝나야 경기가 종료")
+    @DisplayName("모든 투구가 끝나야 경기가 종료 (모두 스크라이크를 칠 경우 24번 플레이)")
     void game_over_test() {
         // given
         BowlingGame bowlingGame = BowlingGame.of(Arrays.asList("YKJ", "KKK"));

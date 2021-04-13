@@ -21,13 +21,13 @@ class StrikeTest {
     }
 
     @Test
-    @DisplayName("STRIKE 상태는 완료(True) 상태를 가짐")
+    @DisplayName("STRIKE 상태이면 완료(True) 상태를 가짐")
     void strike_isEnd_test() {
         assertThat(Strike.of().isEnd()).isTrue();
     }
 
     @Test
-    @DisplayName("STRIKE 상태는 점수 10점, 추가 투구 가능 2회를 가짐")
+    @DisplayName("STRIKE 상태이면 점수 10점, 추가 투구 가능 2회를 가짐")
     void strike_getScore_test() {
         // given
         State strike = Strike.of();
@@ -40,7 +40,7 @@ class StrikeTest {
     }
 
     @Test
-    @DisplayName("STRIKE 상태는 기존 점수에 10점이 더해짐")
+    @DisplayName("STRIKE 상태이면 기존 점수에 10점이 더해짐")
     void strike_calculate_test() {
         // given
         Score baseScore = Score.of(10, Remaining.of(2));

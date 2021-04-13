@@ -122,7 +122,7 @@ class NormalFrameTest {
     }
 
     @Test
-    @DisplayName("STRIKE 상태에서 추가 2번 보너스 점수가 더해져서 계산됨")
+    @DisplayName("STRIKE 상태이면 추가 2번 보너스 점수가 더해져서 계산됨")
     void strike_calculate_score_test() {
         // given
         Frame frame = Frame.init();
@@ -137,7 +137,7 @@ class NormalFrameTest {
     }
 
     @Test
-    @DisplayName("SPARE 상태에서 추가 1번 보너스 점수가 더해져서 계산")
+    @DisplayName("SPARE 상태이면 추가 1번 보너스 점수가 더해져서 계산")
     void spare_calculate_score_test() {
         // given
         Frame frame = Frame.init();

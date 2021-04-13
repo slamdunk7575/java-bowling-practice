@@ -36,14 +36,14 @@ public class ContinueTest {
 
 
     @Test
-    @DisplayName("CONTINUE 상태는 추가 투구 가능한 상태를 가지는 테스트")
+    @DisplayName("CONTINUE 상태이면 추가 투구 가능한 상태")
     void continue_is_end_test() {
         assertThat(Continue.of(Pin.of(5)).isEnd()).isFalse();
     }
 
 
     @Test
-    @DisplayName("CONTINUE 상태는 첫번째 투구 점수, 추가 투구 1회 Score 를 가짐")
+    @DisplayName("CONTINUE 상태이면 첫번째 투구 점수, 추가 투구 1회 Score 를 가짐")
     void continue_get_score_test() {
         // given
         State continueState = Continue.of(Pin.of(7));
@@ -56,7 +56,7 @@ public class ContinueTest {
     }
 
     @Test
-    @DisplayName("CONTINUE 상태는 기존 점수에 더해지고 Remaining 감소됨")
+    @DisplayName("CONTINUE 상태이면 기존 점수에 더해지고 Remaining 감소됨")
     void continue_calculate_test() {
         // given
         Score baseScore = Score.of(7, Remaining.of(1));

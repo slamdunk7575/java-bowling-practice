@@ -23,13 +23,13 @@ class ReadyTest {
     }
 
     @Test
-    @DisplayName("READY 상태는 추가 투구 가능값을 가지는 테스트")
+    @DisplayName("READY 상태이면 추가 투구 가능값을 가지는 테스트")
     void ready_isEnd_test() {
         assertThat(Ready.of().isEnd()).isFalse();
     }
 
     @Test
-    @DisplayName("READY 상태는 점수 0점, 추가 투구 가능 3회를 가짐")
+    @DisplayName("READY 상태이면 점수 0점, 추가 투구 가능 3회를 가짐")
     void ready_getScore_test() {
         // given
         State ready = Ready.of();

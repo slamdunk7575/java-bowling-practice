@@ -18,13 +18,13 @@ public class MissTest {
             .isInstanceOf(IllegalArgumentException.class).hasMessageMatching("현재 상태는 더이상 볼링공을 굴릴 수 없습니다.");
     }
 
-    @DisplayName("MISS 상태는 추가 없이 종료값을 가지는 테스트")
+    @DisplayName("MISS 상태이면 추가 없이 종료값을 가짐")
     @Test
     void miss_is_end_test() {
         assertThat(Miss.of(Pin.of(3), Pin.of(6)).isEnd()).isTrue();
     }
 
-    @DisplayName("MISS 상태는 두수의 합을 점수로 가지고 추가 투구 0회를 가짐")
+    @DisplayName("MISS 상태이면 두수의 합을 점수로 가지고 추가 투구 0회를 가짐")
     @Test
     void miss_get_score_test() {
         // given
@@ -37,7 +37,7 @@ public class MissTest {
         assertThat(score).isEqualTo(Score.of(7, Remaining.of(0)));
     }
 
-    @DisplayName("MISS 상태는 기존 점수에 두수의 합이 더해짐")
+    @DisplayName("MISS 상태이면 기존 점수에 두수의 합이 더해짐")
     @Test
     void miss_calculate_test() {
         // given

@@ -18,7 +18,7 @@ public class User {
     }
 
     private static void validate(String name) {
-        if(name == null || name.length() != MAX_SIZE) {
+        if (name == null || name.length() != MAX_SIZE) {
             throw new IllegalArgumentException("사용자 이름 길이는 1~3글자여야 합니다.");
         }
     }

@@ -50,4 +50,8 @@ public class Continue implements State {
     public boolean isFrameFinish() {
         return false;
     }
+
+    public Pin getFirst() {
+        return this.first;
+    }
 }

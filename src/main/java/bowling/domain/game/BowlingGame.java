@@ -49,4 +49,7 @@ public class BowlingGame {
         return getCurrent().getUser();
     }
 
+    public List<ScoreBoard> getScoreBoards() {
+        return scoreBoards;
+    }
 }
